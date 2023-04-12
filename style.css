@@ -1,0 +1,26 @@
+body {
+  background-color: blueviolet;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gameContainer {
+  width: 20rem;
+  height: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.box {
+  background-color: aquamarine;
+  margin: 0.05rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.box:hover {
+  background-color: rgb(127, 182, 255);
+}
