@@ -8,6 +8,7 @@ body {
   height: 20rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   margin: auto;
   margin-top: 5rem;
 }
@@ -24,3 +25,8 @@ body {
 .box:hover {
   background-color: rgb(127, 182, 255);
 }
+
+/* .boxtext {
+  height: 100%;
+  width: 100%;
+} */

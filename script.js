@@ -1,6 +1,21 @@
-// things needed to be done
-// 1. create the board
-// 2. make board/sign array
-// 3. display signs
-// 4. create players
-// 5. make win-loose mechanism
+let currentPlayer = 'X'
+let gameBoard = ['', '', '', '', '', '', '', '', '']
+
+function handleBoxClick(event) {
+  const clickedBox = event.target
+  const clickedBoxIndex = clickedBox.getAttribute('data-index')
+
+  if (gameBoard[clickedBoxIndex] !== '') {
+    return
+  }
+
+  gameBoard[clickedBoxIndex] = currentPlayer
+  clickedBox.innerHTML = currentPlayer
+  currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+  console.log(gameBoard)
+}
+
+const boxes = document.getElementsByClassName('box')
+Array.from(boxes).forEach((box) => {
+  box.addEventListener('click', handleBoxClick)
+})
