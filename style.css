@@ -26,7 +26,13 @@ body {
   background-color: rgb(127, 182, 255);
 }
 
-/* .boxtext {
-  height: 100%;
-  width: 100%;
-} */
+.game-over-msg {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0rem auto 2rem auto;
+  height: 5rem;
+  line-height: 5rem;
+  width: 20rem;
+  background-color: whitesmoke;
+  color: black;
+}
