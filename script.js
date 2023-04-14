@@ -8,7 +8,7 @@ function handleBoxClick(event) {
   const clickedBox = event.target
   const clickedBoxIndex = clickedBox.getAttribute('data-index')
 
-  if (isOver || isTie) {
+  if (isOver) {
     return
   }
 
@@ -52,31 +52,19 @@ const checkWin = () => {
     if (gameBoard[2] !== '') {
       gameOver()
     }
-  } else if (
-    gameBoard[0] !== '' &&
-    gameBoard[1] !== '' &&
-    gameBoard[2] !== '' &&
-    gameBoard[3] !== '' &&
-    gameBoard[4] !== '' &&
-    gameBoard[5] !== '' &&
-    gameBoard[6] !== '' &&
-    gameBoard[7] !== '' &&
-    gameBoard[8] !== ''
-  ) {
+  } else if (gameBoard.every((box) => box !== '')) {
     isTie = true
     gameOver()
   }
 }
-// gameBoard[(0, 1, 2, 3, 4, 5, 6, 7, 8)] !== ''
+
 const gameOver = () => {
   isOver = true
   currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
   if ((isTie = true)) {
-    gameOverMsg.innerHTML = `It's a Tie`
-    console.log('its a tie')
-  } else {
+    gameOverMsg.innerHTML = `It's a Tie!`
+  } else if ((isTie = false)) {
     gameOverMsg.innerHTML = `'${currentPlayer}' WON`
-    console.log(`player ${currentPlayer} WON`)
   }
 }
 
